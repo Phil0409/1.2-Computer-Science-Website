@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phillip Ngo</title>
+    <link rel="stylesheet" href="Website.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle">☰</label>
+ 
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#Advice">Personal Advice</a></li>
+        </ul>
+    </nav>
+ 
+    <section id="home" class="main-content">
+        <h1 class="ml12"><span class="highlight">Phillip Ngo</span></h1>
+        <p></p>
+    </section>
+ 
+    <section id="projects">
+        <div class="section-content">
+            <h2 class="ml1">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">Projects</span>
+                    <span class="line line2"></span>
+                </span>
+            </h2>
+            <div class="project-gallery">
+                <img src="Blender Rubbish Bin 2.png" alt="Project 1">
+                <img src="blenderimage2.jpg" alt="Project 2">
+                <img src="Ocean 3.png" alt="Project 3">
+                <img src="blenderimage4.jpg" alt="Project 4">
+                <img src="blenderimage 5.jpg" alt="Project 5">
+                <img src="blenderimage6.jpg" alt="Project 6">
+            </div>
+        </div>
+    </section>
+ 
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <div class="about-boxes">
+                <div class="about-box">
+                    <p>I am a day student currently at Saint Kentigern College and I have a strong interest in both academics and sports. My hobbies include football, golf, and going for runs to stay active. In my free time, I tend to play video games, allowing time to go by faster. Balancing academic and sports has allowed me to develop both discipline and strategic thinking, which I find useful in various aspects of life. I also try spare time for swimming in my day to day life as i have a pool and tend to swim in it to increase exercise and swimming skills.</p>
+                    <h2 class="skills-title">Skills Used</h2>
+                    <p class="skills-description">During my coding journey, I have learned to use HTML, CSS, and JavaScript. These basic languages help me build and style my website. I have also used Bootstrap to make designs that work well on different screen sizes. By practicing coding,  I have improved my problem-solving skills, which help me fix issues and code more efficiently. Overall, this experience has deepened my understanding of web development and design, allowing me to create a website that looks good and works well.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section id="Advice">
+        <div class="section-content">
+            <h2>Personal Advice</h2>
+            <p>This website displays a series of projects from previous students to help support those looking to gain ideas and knowledge in 3D designing. Throughout my journey, I wanted to use my skills in coding to create a platform to implement these projects and share them with others, using my coding to assist others that may want to gain a further understanding in 3D designing.</p>
+ 
+            <div class="advice-section">
+                <p class="advice-title">Why Should Young People Get into 3D Designing?</p>
+                <p>3D design is all around us. It plays a big role in movies, video games, buildings, and even virtual reality. Almost everything we see today has been improved by 3D modeling. Learning 3D design lets you create worlds, objects, and characters that people interact with every day. As human technology tends to increase day by day the use of 3D design is becoming even more important in our lives. More and more industries are using it, which means there are many chances for creative people. By learning these skills, you can show your imagination and work on exciting projects. Whether you want to make video games, design buildings, or create animations, 3D design can help you do all of this. The use of 3d designing can also have major career paths such as leading you to job opportunities like computer programming, software engineering, and game development making it a great option for younger people to improve in 3d designing.</p>
+ 
+                <p class="advice-title">Why is 3D Modeling Exciting for Younger people?</p>
+                <p>3D modeling is a super fun way for young people to show their creativity. It lets you see your ideas come to life on a computer screen. With a computer and some software, you can make anything you can think of, like characters, buildings, or even entire worlds. Turning your ideas into real creations is really exciting and makes you feel proud especially for younger people learning. When you start 3D modeling, you begin with a simple shape and add details to make it look just how you want. This process helps you learn how to make your designs better. 3D modeling teaches you how things work in the real world and builds your technical skills. Overall, its an exciting experience for young people to show potential unseen skills that can lead to careers or hobbies.
+                </p>
+ 
+                <p class="advice-title">How Can This Website help gain Inspiration/Ideas?</p>
+                <p>This website is an awesome place to find cool ideas for your projects. Whether you’re just starting with 3D design or you’ve already tried making some stuff, checking out these projects can really help you think of new things and get excited about what you can create. Looking through projects on this site can help you gain inspiration and see how other students made their designs and what they came up with. This can give you fresh ideas and show you different ways to do 3D modeling. Another bonus is seeing what other people have created can inspire you to try out new skills or techniques.
+                </p>
+            </div>
+        </div>
+    </section>
+ 
+    <script>
+        var textWrapper = document.querySelector('.ml12');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+ 
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml12 .letter',
+            translateX: [40,0],
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 500 + 30 * i
+        }).add({
+            targets: '.ml12 .letter',
+            translateX: [0,-30],
+            opacity: [1,0],
+            easing: "easeInExpo",
+            duration: 1100,
+            delay: (el, i) => 100 + 30 * i
+        });
+ 
+        var textWrapper = document.querySelector('.ml1 .letters');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+ 
+        anime.timeline({loop: true})
+        .add({
+            targets: '.ml1 .letter',
+            scale: [0.3,1],
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: (el, i) => 70 * (i+1)
+        }).add({
+            targets: '.ml1 .line',
+            scaleX: [0,1],
+            opacity: [0.5,1],
+            easing: "easeOutExpo",
+            duration: 700,
+            offset: '-=875',
+            delay: (el, i, l) => 80 * (l - i)
+        }).add({
+            targets: '.ml1',
+            opacity: 0,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+    </script>
+</body>
+</html>
